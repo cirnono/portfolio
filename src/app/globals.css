@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* 暗色 */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --foreground-rgb: 255 255 255;
+        --background-start-rgb: 0 0 0;
+        --background-end-rgb: 0 0 0;
+    }
 }
 
+/* v4 的主题扩展：颜色别名、字体等 */
+@theme {
+    /* 别名颜色（引用内置调色板变量） */
+    --color-primary: var(--color-amber-500);
+    --color-secondary: var(--color-pink-500);
+
+    /* 你已有的别名 */
+    --color-background: rgb(var(--background-start-rgb));
+    --color-foreground: rgb(var(--foreground-rgb));
+
+    /* 字体别名（按需保留） */
+    --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+    --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
+        monospace;
+}
+
+@utility bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+}
+@utility bg-gradient-conic {
+    background-image: conic-gradient(
+        from 180deg at 50% 50%,
+        var(--tw-gradient-stops)
+    );
+}
+
+/* 页面背景示例：可保留 */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-foreground);
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
 }
