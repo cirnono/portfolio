@@ -15,38 +15,38 @@ import { TypeAnimation } from "react-type-animation";
 
 const skills = [
     //front-end
-    { name: "CSS", level: 0.5, angle: 960 },
-    { name: "HTML", level: 1.5, angle: 920 },
-    { name: "JavaScript", level: 1, angle: 970 },
-    { name: "NextJS", level: 1, angle: 920 },
-    { name: "Bootstrap", level: 2, angle: 930 },
-    { name: "Vue", level: 2, angle: 915 },
-    { name: "React", level: 1.5, angle: 965 },
+    { name: "CSS", level: 0.6, angle: 960 },
+    { name: "HTML", level: 1.7, angle: 920 },
+    { name: "JavaScript", level: 1.2, angle: 970 },
+    { name: "NextJS", level: 1.2, angle: 920 },
+    { name: "Bootstrap", level: 2.3, angle: 930 },
+    { name: "Vue", level: 2.2, angle: 915 },
+    { name: "React", level: 1.7, angle: 965 },
     // database
-    { name: "MySQL", level: 2, angle: -200 },
-    { name: "MongoDB", level: 1.5, angle: -220 },
-    { name: "PostgreSQL", level: 1, angle: -220 },
+    { name: "MySQL", level: 2.2, angle: -200 },
+    { name: "MongoDB", level: 1.7, angle: -220 },
+    { name: "PostgreSQL", level: 1.1, angle: -220 },
     // back-end
-    { name: "Python", level: 0.8, angle: 1000 },
-    { name: "Java", level: 0.6, angle: 1040 },
-    { name: "C", level: 1.3, angle: 1000 },
-    { name: "C Sharp", level: 1.2, angle: 1020 },
+    { name: "Python", level: 1.1, angle: 1000 },
+    { name: "Java", level: 0.5, angle: 1040 },
+    { name: "C", level: 1.7, angle: 1000 },
+    { name: "C Sharp", level: 1.1, angle: 1020 },
     { name: "C++", level: 1.1, angle: 1040 },
-    { name: "PHP", level: 1.2, angle: 1060 },
-    { name: "NodeJS", level: 1.6, angle: 1030 },
-    { name: "Spring", level: 1.7, angle: 1060 },
+    { name: "PHP", level: 1.5, angle: 1060 },
+    { name: "NodeJS", level: 1.7, angle: 1030 },
+    { name: "Spring", level: 2, angle: 1060 },
     // tools
-    { name: "Git Bash", level: 0.2, angle: 50 },
+    { name: "Git Bash", level: 0.4, angle: 50 },
     { name: "Git", level: 2, angle: 30 },
-    { name: "Photoshop", level: 0.5, angle: 30 },
-    { name: "Github", level: 1, angle: 20 },
-    { name: "Intellij", level: 1.5, angle: 10 },
-    { name: "Jenkins", level: 2, angle: 10 },
-    { name: "Latex", level: 1.5, angle: 30 },
-    { name: "Postman", level: 1, angle: 50 },
-    { name: "Unity", level: 1.4, angle: 60 },
-    { name: "Visual Studio", level: 1.2, angle: 80 },
-    { name: "Visual Studio Code", level: 0.7, angle: 80 },
+    { name: "Photoshop", level: 0.9, angle: 20 },
+    { name: "Github", level: 0.9, angle: 80 },
+    { name: "Intellij", level: 1.4, angle: 10 },
+    { name: "Jenkins", level: 1.9, angle: 10 },
+    { name: "Latex", level: 1.5, angle: 40 },
+    { name: "Postman", level: 0.9, angle: 50 },
+    { name: "Unity", level: 1.5, angle: 60 },
+    { name: "Visual Studio", level: 1.5, angle: 75 },
+    { name: "Visual Studio Code", level: 2, angle: 85 },
 ];
 
 function calculatePosition(
@@ -102,14 +102,7 @@ const SkillsSection = () => {
                 My Skills
             </h2>
 
-            <div
-                className="radar-chart"
-                style={{
-                    position: "relative",
-                    width: "1200px",
-                    height: "800px",
-                }}
-            >
+            <div className="radar-chart relative mx-auto w-full max-w-[1200px] aspect-[1] overflow-visible">
                 {/* 创建雷达图的背景圈 */}
                 {[...Array(5)].map((e, i) => (
                     <div
