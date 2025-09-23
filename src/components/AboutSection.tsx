@@ -2,6 +2,7 @@
 import React, { useTransition, useState, useMemo } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { prefix } from "@/utils/projectDirectory";
 
 const TAB_DATA = [
     {
@@ -119,7 +120,7 @@ const AboutSection = () => {
         <section className="text-white" id="about">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
                 <Image
-                    src="/images/about-image.png"
+                    src={`${prefix}/images/about-image.png`}
                     alt="About Me"
                     width={500}
                     height={500}

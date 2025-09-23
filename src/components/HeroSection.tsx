@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { prefix } from "@/utils/projectDirectory";
 
 const HeroSection = () => {
     const fileUrl =
@@ -84,7 +85,7 @@ const HeroSection = () => {
                 >
                     <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
                         <Image
-                            src="/images/hero_ziquan.png"
+                            src={`${prefix}/images/hero_ziquan.png`}
                             alt="hero image"
                             className="w-full h-full object-cover"
                             style={{ borderRadius: "50%/50%" }}
