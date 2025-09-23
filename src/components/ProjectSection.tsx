@@ -3,7 +3,6 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
-import { prefix } from "@/utils/basePath";
 
 const projectsData = [
     {
@@ -11,7 +10,7 @@ const projectsData = [
         title: "Damee Chaowei - Presentation Website",
         description:
             "Frontend: Next.js, Backend: Node.js, Database: PostgresSql, Nginx reverse proxy. Work as a full stack developer.",
-        image: `${prefix}/images/projects/damee.png`,
+        image: `/portfolio/images/projects/damee.png`,
         tag: ["All", "Web"],
         gitUrl: "http://3.27.125.69/en",
         previewUrl: "http://3.27.125.69/en",
@@ -20,7 +19,7 @@ const projectsData = [
         id: 2,
         title: "Portfolio Website",
         description: "Based on React. Work as a font-end developer.",
-        image: `${prefix}/images/projects/portfolio.png`,
+        image: `/images/projects/portfolio.png`,
         tag: ["All", "Web"],
         gitUrl: "https://cirnono.github.io/portfolio/",
         previewUrl:
@@ -31,7 +30,7 @@ const projectsData = [
         title: "FFXIV Strategy Website",
         description:
             "A raid strategy planning tool for Final Fantasy XIV, built with Next.js and TailwindCSS.",
-        image: `${prefix}/images/projects/xivstrat.png`,
+        image: `/images/projects/xivstrat.png`,
         tag: ["All", "Web"],
         gitUrl: "https://xivstrat.com",
         previewUrl: "https://xivstrat.com",
