@@ -10,6 +10,7 @@ import {
     useScroll,
     Variants,
 } from "framer-motion";
+import { prefix } from "@/utils/projectDirectory";
 
 const skills = [
     //front-end
@@ -172,7 +173,7 @@ const SkillsSection = () => {
                         >
                             {/* 这里应该是你的技能图标，可以使用img标签或者其他图标组件 */}
                             <Image
-                                src={`/images/skills/${skill.name.toLowerCase()}.svg`}
+                                src={`${prefix}/images/skills/${skill.name.toLowerCase()}.svg`}
                                 alt={skill.name}
                                 width={40}
                                 height={40}
