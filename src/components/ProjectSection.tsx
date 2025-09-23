@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { prefix } from "@/utils/basePath";
 
 const projectsData = [
     {
@@ -10,73 +11,30 @@ const projectsData = [
         title: "Damee Chaowei - Presentation Website",
         description:
             "Frontend: Next.js, Backend: Node.js, Database: PostgresSql, Nginx reverse proxy. Work as a full stack developer.",
-        image: "/images/projects/damee-web.png",
+        image: `${prefix}/images/projects/damee.png`,
         tag: ["All", "Web"],
         gitUrl: "http://3.27.125.69/en",
         previewUrl: "http://3.27.125.69/en",
     },
     {
-        id: 4,
+        id: 2,
         title: "Portfolio Website",
         description: "Based on React. Work as a font-end developer.",
-        image: "/images/projects/portfolio.png",
+        image: `${prefix}/images/projects/portfolio.png`,
         tag: ["All", "Web"],
-        gitUrl: "https://www.kynono.world/",
+        gitUrl: "https://cirnono.github.io/portfolio/",
         previewUrl:
             "https://drive.google.com/file/d/1OIW8uOZ1DULGBDYMjo-Xoi8pGbMqKGyJ/view?usp=drive_link",
     },
     {
-        id: 5,
+        id: 3,
         title: "FFXIV Strategy Website",
         description:
             "A raid strategy planning tool for Final Fantasy XIV, built with Next.js and TailwindCSS.",
-        image: "/images/projects/xivstrat.png",
+        image: `${prefix}/images/projects/xivstrat.png`,
         tag: ["All", "Web"],
         gitUrl: "https://xivstrat.com",
         previewUrl: "https://xivstrat.com",
-    },
-    {
-        id: 2,
-        title: "Animation Fans Forum - Website",
-        description: "Based on PHP. Work as a full stack developer.",
-        image: "/images/projects/forum-web.png",
-        tag: ["All", "Web"],
-        gitUrl: "http://usuk.site/",
-        previewUrl:
-            "https://drive.google.com/file/d/1Cgf8aw2O8NLpQqzjryYLnVNJijn9nlfi/view?usp=drive_link",
-    },
-    {
-        id: 3,
-        title: "Animation Fans Forum - Mobile",
-        description: "Based on PHP. Work as a full stack developer.",
-        image: "/images/projects/forum-mobile.png",
-        tag: ["All", "Mobile"],
-        gitUrl: "https://usuk.site/portal.php?mod=index&mobile=2",
-        previewUrl:
-            "https://drive.google.com/file/d/1VYi1lS0Y0pf_oDInuOVKH6G0rn97RScb/view?usp=drive_link",
-    },
-
-    {
-        id: 6,
-        title: "Application to improve educational inequality",
-        description:
-            "School project, Use Figma to develop prototypes. Work as a project manager.",
-        image: "/images/projects/app.png",
-        tag: ["All", "Mobile"],
-        gitUrl: "https://drive.google.com/file/d/1JQQ9O3n7xUogxd4AIMEOpSsf5A0tJQc2/view?usp=drive_link",
-        previewUrl:
-            "https://drive.google.com/file/d/1PA22eqZswfeSVDy9oLbxvXhIXY0bIqcW/view?usp=drive_link",
-    },
-    {
-        id: 7,
-        title: "A website for pet hotel",
-        description:
-            "School project, based on HTML, CSS and JavaScript. Work as a project manager and font-end developer.",
-        image: "/images/projects/pet.png",
-        tag: ["All", "Web"],
-        gitUrl: "https://erxcharlotte.github.io/BestMate-Paradise/",
-        previewUrl:
-            "https://drive.google.com/file/d/1kcm3vl-mkNOrK1xRSy_JpKca1UiaeuXo/view?usp=drive_link",
     },
 ];
 

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
     easeOut,
     motion,
@@ -10,8 +10,7 @@ import {
     useScroll,
     Variants,
 } from "framer-motion";
-import Link from "next/link";
-import { TypeAnimation } from "react-type-animation";
+import { prefix } from "@/utils/basePath";
 
 const skills = [
     //front-end
@@ -19,7 +18,7 @@ const skills = [
     { name: "HTML", level: 1.7, angle: 920 },
     { name: "JavaScript", level: 1.2, angle: 970 },
     { name: "NextJS", level: 1.2, angle: 920 },
-    { name: "Bootstrap", level: 2.3, angle: 930 },
+    { name: "Bootstrap", level: 2.4, angle: 930 },
     { name: "Vue", level: 2.2, angle: 915 },
     { name: "React", level: 1.7, angle: 965 },
     // database
@@ -173,10 +172,11 @@ const SkillsSection = () => {
                             // 这里添加你的动画属性
                         >
                             {/* 这里应该是你的技能图标，可以使用img标签或者其他图标组件 */}
-                            <img
-                                src={`/images/skills/${skill.name.toLowerCase()}.svg`}
+                            <Image
+                                src={`${prefix}/images/skills/${skill.name.toLowerCase()}.svg`}
                                 alt={skill.name}
-                                style={{ maxWidth: "100%", maxHeight: "100%" }}
+                                width={40}
+                                height={40}
                             />
                             {/* 文字说明 */}
                             <span
