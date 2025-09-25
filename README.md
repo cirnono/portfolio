@@ -11,11 +11,11 @@ npm i
 npm run dev
 ```
 
+Remember to configure you .env file, recommend use seperate .env.development and .env.production file
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Deploy on Github
 
-Before deploying,
 Build and deploy to Github:
 
 ```bash

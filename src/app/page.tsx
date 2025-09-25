@@ -19,7 +19,6 @@ export default function Home() {
                 <AboutSection />
                 <SkillsSection />
                 <ProjectsSection />
-
                 <EmailSection />
             </div>
             <Footer />
