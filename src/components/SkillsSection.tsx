@@ -97,7 +97,7 @@ const SkillsSection = () => {
 
     return (
         <section id="skills">
-            <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+            <h2 className="text-center mx-auto w-1/3 text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mt-4 mb-8 md:mb-12">
                 My Skills
             </h2>
 
